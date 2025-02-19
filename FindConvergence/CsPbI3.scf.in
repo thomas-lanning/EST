@@ -1,0 +1,32 @@
+ &control
+    calculation='scf'
+    restart_mode='from_scratch',
+    prefix='cspbi3',
+    pseudo_dir = './',
+    outdir='cspbi3/'
+ /
+ &system
+  ibrav= 1, 
+  celldm(1) = 12.067675236,
+  nat= 5,
+  ntyp= 3,
+  ecutwfc = 60,
+  occupations=’tetrahedra’ 
+ /
+ &electrons
+    conv_thr =  1.0d-8
+    mixing_beta = 0.7
+ /
+ATOMIC_SPECIES
+Cs  132.9 Cs.pz-hgh.UPF
+Pb  207.2 Pb.pz-hgh.UPF
+I   126.9  I.pz-hgh.UPF
+ATOMIC_POSITIONS 
+ Cs 0.0 0.0 0.0
+ Pb 0.5 0.5 0.5
+ I 0.5 0.5 0.0
+ I 0.5 0.0 0.5
+ I 0.0 0.5 0.5
+K_POINTS {automatic}
+ 6 6 6  0 0 0
+

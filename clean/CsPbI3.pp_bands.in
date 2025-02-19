@@ -1,0 +1,12 @@
+! Postprocessing of band structure calculation
+! Adjust variables 'prefix' and 'outdir' to
+! correspond to the SCF/non-SCF calculations.
+
+&bands
+  prefix = 'cspbi3'
+  outdir = './cspbi3/'
+  no_overlap = .true.
+
+  filband = 'CsPbI3_bands.dat'
+/
+

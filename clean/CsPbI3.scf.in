@@ -1,0 +1,29 @@
+ &control
+    calculation='scf'
+    restart_mode='from_scratch',
+    prefix='cspbi3',
+    pseudo_dir = './',
+    outdir='cspbi3/'
+ /
+ &system
+! Enter crystal structure information below
+    ibrav= 
+    celldm(1) = 
+    ntyp= 
+    nat= 
+! Edit plane wave cutoff below if necessary
+    ecutwfc = 20.0,
+    occupations='tetrahedra',  
+ /
+ &electrons
+    conv_thr =  1.0d-8
+    mixing_beta = 0.7
+ /
+ATOMIC_SPECIES
+Cs  132.9 Cs.pz-hgh.UPF
+Pb  207.2 Pb.pz-hgh.UPF
+I   126.9  I.pz-hgh.UPF
+ATOMIC_POSITIONS ! Add positions of atoms in unit cell
+K_POINTS {automatic} ! Edit k-point grid size below
+ 1 1 1    0 0 0
+
